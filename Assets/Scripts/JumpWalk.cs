@@ -3,11 +3,17 @@ using UnityEngine;
 
 public class JumpWalk : MonoBehaviour
 {
+    private Hiding hiding;
     Vector3 currentJumpVelocity;
     bool isJumping;
     public Transform cam;
-    private float speed = 3.0f;
-    
+    private float speed = 2.0f;
+
+    void Start()
+    {
+        hiding = gameObject.GetComponent<Hiding>();
+    }
+
     void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
@@ -30,28 +36,31 @@ public class JumpWalk : MonoBehaviour
         moveVelocity = forward * vertical + right * horizontal;
         moveVelocity *= speed;
 
-        if (Input.GetButtonDown("Jump"))
+        if (hiding.isHide == false)
         {
-            if (!isJumping)
+            if (Input.GetButtonDown("Jump"))
             {
-                isJumping = true;
-                currentJumpVelocity = Vector3.up * 3; 
+                if (!isJumping)
+                {
+                    isJumping = true;
+                    currentJumpVelocity = Vector3.up * 3; 
+                }
             }
-        }
 
-        if (isJumping)
-        {
-            controller.Move((moveVelocity + currentJumpVelocity) * Time.deltaTime);
-            currentJumpVelocity += Physics.gravity * Time.deltaTime;
-            
-            if (controller.isGrounded)
+            if (isJumping)
             {
-                isJumping = false;
+                controller.Move((moveVelocity + currentJumpVelocity) * Time.deltaTime);
+                currentJumpVelocity += Physics.gravity * Time.deltaTime;
+                
+                if (controller.isGrounded)
+                {
+                    isJumping = false;
+                }
             }
-        }
-        else
-        {
-            controller.SimpleMove(moveVelocity);
+            else
+            {
+                controller.SimpleMove(moveVelocity);
+            }
         }
     }
 }

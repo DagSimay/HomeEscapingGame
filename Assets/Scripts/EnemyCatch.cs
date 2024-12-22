@@ -14,6 +14,7 @@ public class EnemyCatch : MonoBehaviour
     private float catchDistance = 1f;
     private float cantHideDistance = 2.5f;
     private bool playerSpotted = false;
+    public bool isCatched= false;
     
 
     void Update()
@@ -58,7 +59,7 @@ public class EnemyCatch : MonoBehaviour
             
             if (Vector3.Distance(transform.position, player.position) <= catchDistance)
             {
-                Debug.Log("Game Over");
+                isCatched = true;
             }
         }
     }

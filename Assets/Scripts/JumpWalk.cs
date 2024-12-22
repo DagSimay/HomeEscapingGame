@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class JumpWalk : MonoBehaviour
 {
+    private EscapeHome escapeHome;
     private Hiding hiding;
     Vector3 currentJumpVelocity;
     bool isJumping;
@@ -12,6 +13,7 @@ public class JumpWalk : MonoBehaviour
     void Start()
     {
         hiding = gameObject.GetComponent<Hiding>();
+        escapeHome = gameObject.GetComponent<EscapeHome>();
     }
 
     void Update()
@@ -36,7 +38,7 @@ public class JumpWalk : MonoBehaviour
         moveVelocity = forward * vertical + right * horizontal;
         moveVelocity *= speed;
 
-        if (hiding.isHide == false)
+        if (hiding.isHide == false && escapeHome.walkable == true)
         {
             if (Input.GetButtonDown("Jump"))
             {

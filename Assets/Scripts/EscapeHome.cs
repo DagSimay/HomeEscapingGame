@@ -11,6 +11,8 @@ public class EscapeHome : MonoBehaviour
     public TextMeshProUGUI escapeText;
     public TMP_InputField inputField;
     private string password = "52714";
+    public bool walkable = true;
+    public bool isEscaped = false;
 
     void Start()
     {
@@ -37,8 +39,9 @@ public class EscapeHome : MonoBehaviour
             escapeText.gameObject.SetActive(false);
         }
         
-        if (inputField.gameObject.activeSelf) 
+        if (inputField.gameObject.activeSelf)
         {
+            walkable = false;
             escapeText.gameObject.SetActive(false);
             string input = inputField.text;
 
@@ -46,11 +49,11 @@ public class EscapeHome : MonoBehaviour
             {
                 if (input == password)
                 {
-                    Debug.Log("Congratulations! You escaped the house!");
+                    isEscaped = true;
                 }
                 else
                 {
-                    Debug.Log("Wrong password! Try again.");
+                    walkable = true;
                 }
                 
                 inputField.text = ""; 

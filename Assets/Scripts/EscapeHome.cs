@@ -37,23 +37,26 @@ public class EscapeHome : MonoBehaviour
             escapeText.gameObject.SetActive(false);
         }
         
-        if (inputField.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Return)) 
+        if (inputField.gameObject.activeSelf) 
         {
+            escapeText.gameObject.SetActive(false);
             string input = inputField.text;
 
-            if (input == password)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                Debug.Log("Congratulations! You escaped the house!");
+                if (input == password)
+                {
+                    Debug.Log("Congratulations! You escaped the house!");
+                }
+                else
+                {
+                    Debug.Log("Wrong password! Try again.");
+                }
+                
+                inputField.text = ""; 
+                inputField.gameObject.SetActive(false); 
+                
             }
-            else
-            {
-                Debug.Log("Wrong password! Try again.");
-            }
-
-            inputField.text = ""; 
-            inputField.gameObject.SetActive(false); 
         }
-        
-        
     }
 }

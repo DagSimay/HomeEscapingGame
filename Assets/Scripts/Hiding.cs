@@ -26,6 +26,7 @@ public class Hiding : MonoBehaviour
 
     void Start()
     {
+        transform.rotation = Quaternion.Euler(0f, -0.272f, 0f);
         characterController = gameObject.GetComponent<CharacterController>();
         isHide = false;
         hideText.gameObject.SetActive(false);

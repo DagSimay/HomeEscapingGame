@@ -17,7 +17,7 @@ public class Premise : MonoBehaviour
     {
         
         premisePanel.SetActive(true);
-        cümle.gameObject.SetActive(false);
+        
     }
 
     public void StartGame()

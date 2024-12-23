@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyCatch : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class EnemyCatch : MonoBehaviour
     private float catchDistance = 1f;
     private float cantHideDistance = 2.5f;
     private bool playerSpotted = false;
-    public bool isCatched= false;
+    public static bool isCatched= false;
     
 
     void Update()
@@ -63,4 +64,14 @@ public class EnemyCatch : MonoBehaviour
             }
         }
     }
+    
+    /*public void onPlayerFailed()
+    {
+        if (isCatched == true)
+        {
+            SceneManager.LoadScene("Main Menu");
+            
+
+        }
+    }*/
 }

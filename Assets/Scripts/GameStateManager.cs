@@ -5,18 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
-    public static string gameResult;
+    
 
 
     public void PlayerEscaped()
     {
-        GameStateManager.gameResult = "escaped";
-        SceneManager.LoadScene("Main Menu");
+        Debug.Log("PlayerEscaped method called");
+        if (EscapeHome.isEscaped == true)
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+
+        
+        
     }
 
     public void PlayerCaught()
     {
-        GameStateManager.gameResult = "caught";
-        SceneManager.LoadScene("SampleScene");
+        if (EnemyCatch.isCatched == true)
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+        
     }
 }

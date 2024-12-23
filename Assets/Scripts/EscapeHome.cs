@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscapeHome : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class EscapeHome : MonoBehaviour
     public TMP_InputField inputField;
     private string password = "52714";
     public bool walkable = true;
-    public bool isEscaped = false;
+    public static bool isEscaped = false;
 
     void Start()
     {
@@ -62,4 +63,15 @@ public class EscapeHome : MonoBehaviour
             }
         }
     }
+    /*public void onPlayerEscaped()
+    {
+
+        if (isEscaped == true)
+        {
+            SceneManager.LoadScene("Main Menu");
+            
+
+        }
+
+    }*/
 }

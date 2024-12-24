@@ -909,7 +909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   premisePanel: {fileID: 602151204}
-  "c\xFCmle": {fileID: 657670790}
 --- !u!114 &444199592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,6 +936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640826d66f0db349b531098ba4b8f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escapedPanel: {fileID: 1900820487}
+  failedPanel: {fileID: 1770256730}
   "c\xFCmle": {fileID: 657670790}
 --- !u!1 &602151204
 GameObject:
@@ -1045,7 +1046,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1873749276}
+  m_Father: {fileID: 724025369}
   m_LocalEulerAnglesHint: {x: 0, y: -5.841, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1180,11 +1181,11 @@ RectTransform:
   m_GameObject: {fileID: 694496791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9.306691}
-  m_LocalScale: {x: 3.125, y: 3.125, z: 3.125}
+  m_LocalScale: {x: 3.1249998, y: 3.1249998, z: 3.1249998}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1844949141}
-  m_Father: {fileID: 1873749276}
+  m_Father: {fileID: 724025369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1515,6 +1516,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: aec54d7a991d7b644b145d550a4b7831, type: 3}
   m_PrefabInstance: {fileID: 702690070}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &724025368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724025369}
+  - component: {fileID: 724025371}
+  - component: {fileID: 724025370}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &724025369
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724025368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1166574773}
+  - {fileID: 694496792}
+  - {fileID: 1623641310}
+  - {fileID: 657670789}
+  m_Father: {fileID: 1873749276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &724025370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724025368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &724025371
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724025368}
+  m_CullTransparentMesh: 1
 --- !u!4 &909690651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7475956593801697365, guid: 34305854466a4a3458316afeedb81c5a, type: 3}
@@ -2161,12 +2241,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166574772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1873749276}
+  m_Father: {fileID: 724025369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2455,8 +2535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -53.946}
-  m_SizeDelta: {x: 1437.988, y: 629.89}
+  m_AnchoredPosition: {x: 6, y: -53.946}
+  m_SizeDelta: {x: 1511.166, y: 629.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356919194
 MonoBehaviour:
@@ -2481,9 +2561,10 @@ MonoBehaviour:
   m_text: "Can you escape this terrifying house? Yes? But you're not alone! There's
     someone you must avoid and a password you need to find. I'll give you a few hints.
     You need a 5-digit code. If you reach the door without the 5-digit code, it might
-    be the last thing you ever see. You must find one digit in each room. There are
-    places to hide in the rooms use them wisely. Perhaps some numbers are hidden
-    where you choose to hide. \n\nGood luck!"
+    be the last thing you ever see. You must find one digit in each room.\nDon't
+    forget; black, red, yellow, blue and green... There are places to hide in the
+    rooms use them wisely. Perhaps some numbers are hidden where you choose to hide.
+    \n\nGood luck!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3919,11 +4000,11 @@ RectTransform:
   m_GameObject: {fileID: 1623641309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9.306691}
-  m_LocalScale: {x: 3.125, y: 3.125, z: 3.125}
+  m_LocalScale: {x: 3.1249998, y: 3.1249998, z: 3.1249998}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1564848922}
-  m_Father: {fileID: 1873749276}
+  m_Father: {fileID: 724025369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -4692,10 +4773,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1166574773}
-  - {fileID: 694496792}
-  - {fileID: 1623641310}
-  - {fileID: 657670789}
+  - {fileID: 724025369}
   - {fileID: 602151205}
   - {fileID: 1900820488}
   - {fileID: 1770256731}

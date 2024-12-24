@@ -6,47 +6,41 @@ using UnityEngine.SceneManagement;
 
 public class EscapedFail : MonoBehaviour
 {
-    public static GameObject escapedPanel;
-    public static GameObject failedPanel;
+    public GameObject escapedPanel;
+    public GameObject failedPanel;
     public TMP_Text cümle;
 
 
-    /*public void onPlayerEscaped()
+    
+    public void onPlayerEscaped()
     {
-
-        if (EscapeHome.isEscaped == true)
-        {
-            SceneManager.LoadScene("Main Menu");
-            escapedPanel.SetActive(true);
-
-        }
-
+        failedPanel.SetActive(true);
+        SceneManager.LoadScene("Main Menu");
+        
+            
+            
     }
 
     public void onPlayerFailed()
     {
-        if (EnemyCatch.isCatched == true)
-        {
-            SceneManager.LoadScene("Main Menu");
-            failedPanel.SetActive(true);
-
-        }
+        failedPanel.SetActive(true);
+        SceneManager.LoadScene("Main Menu");
+        
     }
 
 
- public void restartGame()
+    public void restartGame()
     {
         SceneManager.LoadScene("SampleScene");
     }
 
 
-public void LoadMainMenu()
+    public void LoadMainMenu()
     { 
-        escapedPanel.SetActive(!escapedPanel.activeSelf); 
-        failedPanel.SetActive(!failedPanel.activeSelf);
+        
         SceneManager.LoadScene("Main Menu");
        
         
-    }*/
+    }
 
 }

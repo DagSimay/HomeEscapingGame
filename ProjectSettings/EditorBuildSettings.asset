@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 10f4048e06a1867409419506df6439ab
+  - enabled: 1
+    path: Assets/Scenes/EscapedScene.unity
+    guid: 4d0221e78b06f3e449cdfd42f6c7eb20
+  - enabled: 1
+    path: Assets/Scenes/FailedScene.unity
+    guid: 196adf0b5d7e4bb428637b414b83b909
   m_configObjects: {}

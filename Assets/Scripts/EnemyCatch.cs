@@ -16,7 +16,13 @@ public class EnemyCatch : MonoBehaviour
     private float cantHideDistance = 2.5f;
     private bool playerSpotted = false;
     public static bool isCatched= false;
-    
+    private EscapedFail escapedFail;
+
+
+    void Start()
+    {
+        escapedFail = new EscapedFail();
+    }
 
     void Update()
     {
@@ -60,18 +66,12 @@ public class EnemyCatch : MonoBehaviour
             
             if (Vector3.Distance(transform.position, player.position) <= catchDistance)
             {
-                isCatched = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                SceneManager.LoadScene("FailedScene", LoadSceneMode.Single);
             }
         }
     }
     
-    /*public void onPlayerFailed()
-    {
-        if (isCatched == true)
-        {
-            SceneManager.LoadScene("Main Menu");
-            
-
-        }
-    }*/
+    
 }

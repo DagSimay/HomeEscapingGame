@@ -14,11 +14,13 @@ public class EscapeHome : MonoBehaviour
     private string password = "52714";
     public bool walkable = true;
     public static bool isEscaped = false;
+    private EscapedFail escapedFail;
 
     void Start()
     {
         escapeText.gameObject.SetActive(false);
         inputField.gameObject.SetActive(false);
+        escapedFail = new EscapedFail();
     }
     
     void Update()
@@ -50,7 +52,10 @@ public class EscapeHome : MonoBehaviour
             {
                 if (input == password)
                 {
-                    isEscaped = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    SceneManager.LoadScene("EscapedScene",LoadSceneMode.Single);
+                    
                 }
                 else
                 {
@@ -63,15 +68,5 @@ public class EscapeHome : MonoBehaviour
             }
         }
     }
-    /*public void onPlayerEscaped()
-    {
-
-        if (isEscaped == true)
-        {
-            SceneManager.LoadScene("Main Menu");
-            
-
-        }
-
-    }*/
+    
 }

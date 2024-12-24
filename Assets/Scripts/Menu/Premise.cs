@@ -9,7 +9,7 @@ public class Premise : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject premisePanel;
-    public TMP_Text cümle;
+    
     
 
 

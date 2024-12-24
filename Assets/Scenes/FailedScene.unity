@@ -966,7 +966,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1165489985}
+        - m_Target: {fileID: 1287213964}
           m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
           m_MethodName: HoverSound
           m_Mode: 1
@@ -982,7 +982,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1165489985}
+        - m_Target: {fileID: 1287213964}
           m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
           m_MethodName: ClickSound
           m_Mode: 1
@@ -1238,7 +1238,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1165489985}
+        - m_Target: {fileID: 1895647241}
           m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
           m_MethodName: HoverSound
           m_Mode: 1
@@ -1254,7 +1254,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1165489985}
+        - m_Target: {fileID: 1895647241}
           m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
           m_MethodName: ClickSound
           m_Mode: 1
